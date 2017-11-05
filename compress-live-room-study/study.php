@@ -70,9 +70,11 @@ foreach ($new as $index => list($word, $count)) {
         $_c = str_replace($word, $char, $_c);
     }
 }
-printf('%d, %d, %.1f%%'. PHP_EOL, strlen($content), strlen($_c),100 *strlen($content) / strlen($_c));
+printf('%d, %d, %.1f%%'. PHP_EOL, strlen($content), strlen($_c), 100 * strlen($content) / strlen($_c));
+
 
 $_cc = gzdeflate($_c, 1);
-printf('%d, %d, %.1f%%'. PHP_EOL, strlen($content), strlen($_cc),100 *strlen($content) / strlen($_cc));
+printf('%d, %d, %.1f%%'. PHP_EOL, strlen($content), strlen($_cc), 100 * strlen($content) / strlen($_cc));
 
 
+printf('%d, %d, %.1f%%'. PHP_EOL, strlen($content), strlen($compress), 100 * strlen($content)/strlen($compress));
